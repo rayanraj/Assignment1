@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function validate()
+        {
+            let postal = document.getElementById("postalCode");
+            if(postal.toString().length()!=6)
+            {
+                alert("Postal code should be of 6 digits")
+            }
+        }
+    </script>
+    <title>Form</title>
+</head>
+<body>
+    <form onsubmit="validate()">
+        <label for="title">Title: &emsp; &emsp; &emsp;</label>
+        <select id="title" name="title">
+            <option value="Mr.">Mr.</option>
+            <option value="Mrs.">Mrs.</option>
+            <option value="Miss">Miss</option>
+            <option value="Master">Master</option>
+        </select>
+        <br><br>
+        <label for="First Name">First Name: &emsp;</label>
+        <input type="text" id="firstName" required>
+        <br><br>
+        <label for="Last Name">Last Name: &emsp;</label>
+        <input type="text" id="lastName" required>
+
+        <br><br>
+        <label for="Address">Address: &emsp;&emsp;</label>
+        <input type="text" id="adddress" required>
+
+        <br><br>
+        <label for="city">City: &emsp;&emsp;&emsp;&ensp;</label>
+        <input type="text" id="city" required>
+
+        <br><br>
+        <label for="State">State: &emsp;&emsp;&emsp;</label>
+        <input type="text" id="state" required>
+
+        <br><br>
+        <label for="Postal Code">Postal Code:&ensp;</label>
+        <input type="number" id="postalCode" required>
+
+        <br><br>
+        <label for="Country">Country: &emsp;&ensp;</label>
+        <input type="text" id="Country" required>
+
+        <br><br>
+        <label for="Phone">Phone: &emsp;&emsp;</label>
+        <input type="number" id="phone" required>
+
+        <br><br>
+        <label for="Fax">Fax: &emsp;&emsp;&emsp;</label>
+        <input type="text" id="fax" required>
+        <br><br>
+        <label for="email">Email: &emsp;&emsp;&emsp;</label>
+        <input type="email" id="email" required>
+        <br><br>
+        <label for="payment">Payment by:</label>
+        <input type="radio" id="payPal" name="Payment" value="payPal">
+        <label for="payment">PayPal</label><br>
+        <input type="radio" id="manual" name="Payment" value="Manual Pay">
+        <label for="payment">Manual pay on Arrival</label><br>
+        <input type="radio" id="credit" name="Payment" value="credit">
+        <label for="payment">Credit Card</label>
+        <br><br>
+        <p>Any additional requests:</p>
+        <textarea name="message" rows="10" cols="30"></textarea><br><br>
+        <p><input type="checkbox" required name="terms">I agree with <a href="abc.html">Terms & Conditions</a></p><br><br>
+        <button type="submit" value="Submit">Confirm and checkout</button>
+    </form>
+</body>
+</html>

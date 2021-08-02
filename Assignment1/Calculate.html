@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    var x="Add";
+    function handleSelect() {
+     x = document.getElementById("select1").value;
+    }
+        function answer(){
+       
+    if (x == 'Add') {
+        var ans=parseInt(document.getElementById('first').value)+parseInt(document.getElementById('second').value);
+        console.log(ans);
+
+    }
+    if (x == 'Subtract') {
+        var ans=parseInt(document.getElementById('first').value)-parseInt(document.getElementById('second').value);
+        console.log(ans);
+
+    }
+    if (x == 'Multiply') {
+        var ans=parseInt(document.getElementById('first').value)*parseInt(document.getElementById('second').value);
+        console.log(ans);
+
+    
+   }
+   document.getElementById("demo").innerHTML =x+" = "+ans;
+  }
+    </script>
+</head>
+<body>
+    <label for="first"><b>First number</b></label><br>
+    <input type="number" id="first" required><br><br>
+
+    <label for="second"><b>Second number</b></label><br>
+    <input type="number" id="second" required><br><br>
+
+    <label for="select"><b>Select</b></label>
+    <select name="select01" id="select1" onchange="handleSelect()">
+        <option value="Add" id="1">Add</option>
+        <option value="Subtract" id="2">Subtract</option>
+        <option value="Multiply" id="3">Multiply</option>
+      </select>
+    <button type="button" value="button" onclick="answer()">Calculate</button>
+    <p id="demo"></p>
+</body>
+</html>
